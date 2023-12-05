@@ -1,0 +1,22 @@
+﻿@using Lab13.Models;
+@model QuizResultsViewModel
+
+
+
+
+
+<div style="margin-left: 50px">
+    <h1>Quiz results</h1>
+
+    <h2>Right answers @Model.RightAnswersCount out @Model.QuestionCount</h2>
+    <ol>
+        @foreach (var quizModel in Model.Models)
+        {
+            <li>@quizModel.A @quizModel.Operation @quizModel.B = @quizModel.Answer</li>
+        }
+    </ol>
+
+</div>
+
+
+

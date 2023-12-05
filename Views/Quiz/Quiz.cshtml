@@ -1,0 +1,32 @@
+﻿﻿@using Lab13.Models
+@model QuizModel
+
+
+
+
+<div style="margin-left: 50px">
+    <h1>Quiz</h1>
+     
+    <form method="post">
+        
+        <input hidden name="A" value = "@Model.A" asp-for="A"/>
+        <input hidden name="B" value="@Model.B" asp-for="B" />
+        <input hidden name="Operation" value="@Model.Operation" asp-for="Operation" />
+        <input hidden name="Result" value="@Model.Result" asp-for="Result" />
+
+
+        <h4>@Model.A @Model.Operation @Model.B =</h4>
+        
+        <input asp-for="Answer"/><br><br>
+
+        <div style="display: flex; flex-direction: row">
+            <input type="submit" value="Next" asp-action="QuizNext">
+            <input style="background-color: lightblue; margin-left: 10px" type="submit" value="Result" asp-action="QuizResult">
+        </div>
+        
+    </form>
+
+    
+</div>
+
+
